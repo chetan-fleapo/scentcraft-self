@@ -1,26 +1,101 @@
-html,
+:root {
+  --white: #ffffff;
+  --white-400: #d5d5d5;
+  --black-100: #2d3a3a;
+  --black-200: rgba(0, 0, 0, 0.14);
+  --black-300: #212120;
+}
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('/fonts/Montserrat-Light.ttf') format('TrueType');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/fonts/Montserrat-Regular.ttf') format('TrueType');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('/fonts/Montserrat-Medium.ttf') format('TrueType');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('TrueType');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  font-family: 'Montserrat-Light';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--black-300);
+  background: var(--white-400);
+  height: --webkit-fill-available;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  height: --webkit-fill-available;
 }
-
-* {
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  outline: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+:after:focus,
+:before:focus,
+:focus {
+  outline: 0;
+}
+
+:after,
+:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+input,
+select,
+textarea {
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 17px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 151.1%;
+}
+h2 {
+  font-size: 16px;
+  line-height: 151.1%;
+}
+h3 {
+  font-size: 14px;
+  line-height: 17px;
 }
